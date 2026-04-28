@@ -14,48 +14,68 @@
     <title>Frontend Mentor | Password generator app</title>
   </head>
   <body>
-    <!-- <main>
+    <main class="app-container">
       <h1>Password Generator</h1>
-      <section>
-        <output class="password-output">P4$5W0rD!</output>
-        <button type="button">Copy</button>
+      <section class="password-display-container">
+        <h1 id="password-display" class="password-text">P1z5#k9L!q</h1>
+        <button id="copy-btn" class="copy-btn" aria-label="Copy password">
+          Copy
+        </button>
       </section>
-      <section>
-        <form>
-          <div>
-            <h2>Character Length</h2>
-            <output class="">10</output>
-            <input type="range" min="8" max="30" />
+
+      <section class="controls-container">
+        <div class="slider-group">
+          <div class="slider-header">
+            <label for="length-slider">Character Length</label>
+            <span id="length-display" class="length-value">10</span>
           </div>
-          <div class="include-characters">
-            <fieldset>
-              <div>
-                <input type="checkbox" />
-                <label for="">Include Uppercase Letters</label>
-              </div>
-              <div>
-                <input type="checkbox" />
-                <label for="">Include Lowercase Letters</label>
-              </div>
-              <div>
-                <input type="checkbox" />
-                <label for="">Include Numbers</label>
-              </div>
-              <div>
-                <input type="checkbox" />
-                <label for="">Include Symbols</label>
-              </div>
-            </fieldset>
-          </div>
-          <div class="password-strength">
-            <h3>Strength</h3>
-            <output>Medium</output>
+          <input
+            type="range"
+            id="length-slider"
+            class="slider"
+            min="1"
+            max="20"
+            value="10"
+          />
+        </div>
+
+        <fieldset class="checkbox-group">
+          <legend class="sr-only">Password Settings</legend>
+
+          <div class="checkbox-wrapper">
+            <input type="checkbox" id="uppercase" checked />
+            <label for="uppercase">Include Uppercase Letters</label>
           </div>
 
-          <button type="submit">Generate</button>
-        </form>
+          <div class="checkbox-wrapper">
+            <input type="checkbox" id="lowercase" checked />
+            <label for="lowercase">Include Lowercase Letters</label>
+          </div>
+
+          <div class="checkbox-wrapper">
+            <input type="checkbox" id="numbers" checked />
+            <label for="numbers">Include Numbers</label>
+          </div>
+
+          <div class="checkbox-wrapper">
+            <input type="checkbox" id="symbols" />
+            <label for="symbols">Include Symbols</label>
+          </div>
+        </fieldset>
+
+        <div class="strength-container">
+          <p>Strength</p>
+          <div id="strength-bars" class="bars">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+          </div>
+        </div>
+
+        <button id="generate-btn" class="generate-btn">Generate -></button>
       </section>
-    </main> -->
+    </main>
     <script type="module" src="./dist/main.js"></script>
   </body>
 </html>
