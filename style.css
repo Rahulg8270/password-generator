@@ -1,0 +1,75 @@
+:root {
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* reset default styles */
+
+fieldset {
+  margin: 0;
+  padding: 0;
+  /* color: transparent; */
+  outline: none;
+  border: none;
+}
+
+body {
+  /* background-color: rebeccapurple; */
+}
+.password__container {
+  background-color: #09080d;
+  color: white;
+  display: grid;
+  min-height: 100vh;
+  place-items: center;
+  align-items: center;
+}
+.password {
+  background-color: #24232c;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  min-width: 300px;
+  padding: 30px;
+}
+.password__display-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.controls {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+.controls__slider-group {
+  display: flex;
+  flex-direction: column;
+  padding-block: 30px;
+  gap: 30px;
+}
+.controls__slider-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.controls__strength-box {
+  display: flex;
+  justify-content: space-between;
+}
+
+.controls__strength-bars {
+  display: grid;
+  grid-template-columns: repeat(4, 10px);
+  gap: 5px;
+}
+.controls__strength-bar {
+  width: 10px;
+  height: 20px;
+  border: 1px solid white;
+}

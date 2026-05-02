@@ -12,80 +12,87 @@
     />
 
     <title>Frontend Mentor | Password generator app</title>
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <main class="password">
-      <h1 class="password__label">Password Generator</h1>
-      <section class="password__display-container">
-        <h1 id="password-display" class="password__display-text">P1z5#k9L!q</h1>
-        <button
-          id="copy-btn"
-          class="password__copy-btn"
-          aria-label="Copy password"
-        >
-          Copy
-        </button>
-      </section>
+    <div class="password__container">
+      <main class="password">
+        <section class="password__display-container">
+          <h1 id="password-display" class="password__display-text">
+            P1z5#k9L!q
+          </h1>
+          <button
+            id="copy-btn"
+            class="password__copy-btn"
+            aria-label="Copy password"
+          >
+            Copy
+          </button>
+        </section>
 
-      <section class="controls">
-        <div class="controls__slider-group">
-          <div class="controls__slider-header">
-            <label for="length-slider" class="controls__label"
-              >Character Length</label
-            >
-            <span id="length-display" class="controls__slider-output">10</span>
-          </div>
-          <input
-            type="range"
-            id="length-slider"
-            class="controls__slider-input"
-            min="1"
-            max="20"
-            value="10"
-          />
-        </div>
-
-        <fieldset class="controls__checkbox-group">
-          <legend class="controls__checkbox-label sr-only">
-            Password Settings
-          </legend>
-
-          <div class="controls__checkbox-wrapper">
-            <input type="checkbox" id="uppercase" checked />
-            <label for="uppercase">Include Uppercase Letters</label>
+        <section class="controls">
+          <div class="controls__slider-group">
+            <div class="controls__slider-header">
+              <label for="length-slider" class="controls__label"
+                >Character Length</label
+              >
+              <span id="length-display" class="controls__slider-output"
+                >10</span
+              >
+            </div>
+            <input
+              type="range"
+              id="length-slider"
+              class="controls__slider-input"
+              min="1"
+              max="20"
+              value="10"
+            />
           </div>
 
-          <div class="controls__checkbox-wrapper">
-            <input type="checkbox" id="lowercase" checked />
-            <label for="lowercase">Include Lowercase Letters</label>
+          <fieldset class="controls__checkbox-group">
+            <legend class="controls__checkbox-label sr-only">
+              Password Settings
+            </legend>
+
+            <div class="controls__checkbox-wrapper">
+              <input type="checkbox" id="uppercase" checked />
+              <label for="uppercase">Include Uppercase Letters</label>
+            </div>
+
+            <div class="controls__checkbox-wrapper">
+              <input type="checkbox" id="lowercase" checked />
+              <label for="lowercase">Include Lowercase Letters</label>
+            </div>
+
+            <div class="controls__checkbox-wrapper">
+              <input type="checkbox" id="numbers" checked />
+              <label for="numbers">Include Numbers</label>
+            </div>
+
+            <div class="controls__checkbox-wrapper">
+              <input type="checkbox" id="symbols" />
+              <label for="symbols">Include Symbols</label>
+            </div>
+          </fieldset>
+
+          <div class="controls__strength-box">
+            <p class="controls__strength-label">Strength</p>
+            <div id="strength-bars" class="controls__strength-bars">
+              <div class="controls__strength-bar"></div>
+              <div class="controls__strength-bar"></div>
+              <div class="controls__strength-bar"></div>
+              <div class="controls__strength-bar"></div>
+            </div>
           </div>
 
-          <div class="controls__checkbox-wrapper">
-            <input type="checkbox" id="numbers" checked />
-            <label for="numbers">Include Numbers</label>
-          </div>
+          <button id="generate-btn" class="controls__generate-btn">
+            Generate
+          </button>
+        </section>
+      </main>
+    </div>
 
-          <div class="controls__checkbox-wrapper">
-            <input type="checkbox" id="symbols" />
-            <label for="symbols">Include Symbols</label>
-          </div>
-        </fieldset>
-
-        <div class="controls__strength-box">
-          <p class="controls__strength-label">Strength</p>
-          <div id="strength-bars" class="controls__strength-bars">
-            <div class="controls__strength-bar"></div>
-            <div class="controls__strength-bar"></div>
-            <div class="controls__strength-bar"></div>
-            <div class="controls__strength-bar"></div>
-          </div>
-        </div>
-
-        <button id="generate-btn" class="controls__generate-btn">
-          Generate
-        </button>
-      </section>
-    </main>
     <script type="module" src="./dist/main.js"></script>
   </body>
 </html>
