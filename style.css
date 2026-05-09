@@ -59,8 +59,9 @@ body {
 }
 
 .controls__strength-box {
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: 1fr auto auto;
+  gap: 10px;
 }
 
 .controls__strength-bars {
@@ -73,3 +74,20 @@ body {
   height: 20px;
   border: 1px solid white;
 }
+
+.strengthBackgroundColor {
+  background-color: #f8cd65;
+}
+
+/* #password-strength-1 {
+  background-color: #f8cd65;
+} */
+/* #password-strength-2 {
+  background-color: #f8cd65;
+}
+#password-strength-3 {
+  background-color: #f8cd65;
+} */
+/* #password-strength-4 {
+  background-color: #f8cd65;
+} */
