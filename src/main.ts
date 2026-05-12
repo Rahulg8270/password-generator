@@ -59,7 +59,6 @@ generatePasswordButtonEl.addEventListener("click", () => {
     includeSymbols: symbolInputCheckbox.checked,
   };
 
-  const passwordGenerated = generatePassword(currentOptions);
   const passwordStrength = strengthChecking(currentOptions);
 
   if (passwordStrength === "TOO EASY") {
@@ -78,7 +77,17 @@ generatePasswordButtonEl.addEventListener("click", () => {
   const passwordLevelBars = passwordLevelDisplay(passwordLevel);
 
   passwordLevelBars;
+
+  const passwordGenerated = generatePassword(currentOptions);
+
+  console.log(passwordGenerated);
+  if (passwordGenerated === "") {
+    passwordDisplayEl.textContent = "Include options";
+    return;
+  }
+
   passwordDisplayEl.textContent = passwordGenerated;
+
   strengthLevelDisplayEl.textContent = passwordStrength;
 });
 

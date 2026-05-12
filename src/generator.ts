@@ -24,6 +24,12 @@ export function generatePassword(currentOptions: PasswordOptions): string {
     characterPool += symbols;
   }
 
+  // console.log(characterPool);
+
+  if (characterPool.length === 0) {
+    return "";
+  }
+
   for (let i = 0; i < currentOptions.length; i++) {
     newPassword +=
       characterPool[Math.floor(Math.random() * characterPool.length)];
